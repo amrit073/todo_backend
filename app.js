@@ -10,8 +10,18 @@ app.get('/', (req, res)=>{
 })
 
 
+const mongoConnect = () => {
+	dburl = `` //url?
+	mongoose.connect(dburl, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	}, (err) => {
+		if (err) return err
+		app.listen(process.env.PORT || 3000, () => {
+			console.log('started listenig at port ');
+ 			
+		})
+	})
+}
 
-app.listen(process.env.PORT || 3000 , ()=>{
-	console.log('started listening');	
-})
 

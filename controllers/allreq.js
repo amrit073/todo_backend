@@ -1,3 +1,5 @@
+const todo = require('../models/models')
+
 
 const getAllTodos = (req, res) =>{
 res.send('datas')	
