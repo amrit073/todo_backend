@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const myRoutes = require('./routes/route')
+const mongoose = require('mongoose')
 
 
 app.use('/api/v1', myRoutes)
@@ -16,7 +17,7 @@ const mongoConnect = () => {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	}, (err) => {
-		if (err) return err
+		if (err) return console.log(err)
 		app.listen(process.env.PORT || 3000, () => {
 			console.log('started listenig at port ');
  			
@@ -24,4 +25,5 @@ const mongoConnect = () => {
 	})
 }
 
+mongoConnect()
 
