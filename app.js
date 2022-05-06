@@ -12,7 +12,7 @@ app.get('/', (req, res)=>{
 
 
 const mongoConnect = () => {
-	dburl = process.env.MONGO_URL; //url?
+	dburl = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@todo-cluster.xpurb.mongodb.net/TodosDatabase?retryWrites=true&w=majority` //url?
 	mongoose.connect(dburl, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
