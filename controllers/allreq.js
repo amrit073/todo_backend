@@ -10,5 +10,21 @@ const saveTodo = (req, res) =>{
 res.send('saved')
 }
 
+const deleteTodo= (req, res)=>{
 
-module.exports = {getAllTodos, saveTodo} 
+}
+
+const changeDate= (req, res)=>{
+
+}
+
+const completeTodo= (req, res)=>{
+
+}
+
+const editTodo= (req, res)=>{
+
+}
+
+
+module.exports = {getAllTodos, saveTodo , deleteTodo, changeDate , completeTodo, editTodo}
